@@ -22,10 +22,10 @@
 			    <tbody>
 			    	<div th:each="student,iterationStatus: ${students}" th:class="${iterationStatus.odd}? 'odd'">
 				        <tr>
-				            <td><h3 th:text="'No. ' + ${iterationStatus.count}">No. 1</h3></td>
-				            <td><h3 th:text="'NPM = ' + ${student.npm}">Student NPM</h3></td>
-				            <td><h3 th:text="'Name = ' + ${student.name}">Student Name</h3></td>
-				            <td><h3 th:text="'GPA = ' + ${student.gpa}">Student GPA</h3></td>
+				            <td><h3 th:text="${iterationStatus.count}">No. 1</h3></td>
+				            <td><h3 th:text="${student.npm}">Student NPM</h3></td>
+				            <td><h3 th:text="${student.name}">Student Name</h3></td>
+				            <td><h3 th:text="${student.gpa}">Student GPA</h3></td>
 				            <td><h3 th:text="${student.gpa} >= 3.49 ? 'Cum Laude!' : 'Sangat Memuaskan'"></h3></td>
 				            <td><button><a th:href="'/student/delete/' + ${student.npm}" > Delete Data</a></button></td>
 				            <td><button><a th:href="'/student/update/' + ${student.npm}" > Update Data</a></button></td>
